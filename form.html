@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<style type>
+		
+		img{
+			position: relative; 
+			text-align: center;
+			margin: auto;
+			width: 70%;
+			
+			
+		}
+		label{
+			background-color: white 
+
+
+		}
+
+		h3{
+			text-align: center;
+		}
+
+	
+
+		form{
+			position: absolute;
+			text-align: center;
+			top: 20px;	
+		}
+
+		.center{ 
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+					
+				}
+
+		
+		
+
+
+	</style>
+	<script type="text/javascript">
+			function turnin(event) {
+				event.preventDefault()
+				window.alert("Response submitted, thank you for your participation")
+				window.prompt("Do you have another submission?", "Yes or no" )
+				x = document.getElementById('songname').value
+				window.alert(x + " is a good song")
+				document.getElementById('clay').innerHTML="Thank you for your time. Did you know that Gengis Khan killed so many people in his conquest of Asia he reduced carbon emissions?"
+				var results = " "
+				var radiobuttons = document.getElementsByName("genre") 
+				for (var i = 0; i < radiobuttons.length; i++)
+					{if (radiobuttons[i].checked) 
+						{results += radiobuttons[i].value
+						results += ", "
+						
+					}
+					}
+				window.alert(results)
+				// Step 1: Create an alert that reads a sentence about the user's song name and song description to them. This is going to require two variables, follow same syntax as line 54. 
+				// Step 2: Display a paragraph to the user after they have clicked the button. An example of this is 55.
+				// Step 3: Get rid of any extra/unwanted alerts/windows/popups. 
+				// document.querySelectorAll('input[name = ""]:checked').value For checkboxes
+				// document.querySelector('input[name = ""]:checked').value For radio buttons (single selection)
+				// If x is a input, then we would say x.toString()
+				// array [0, 1, 2, 3, 4]
+				// string refers to any text
+				// char is a single character 
+				// selector.options[selector.selectedIndex].value
+				//w3 school, value of drop downs. 
+			}
+
+		</script>
+	<title></title>
+</head> <br>
+	<body>
+
+		
+			
+		<img src="https://static.vecteezy.com/system/resources/previews/000/031/144/non_2x/modern-music-notes-vector-pack.jpg">
+		
+
+		
+		
+		
+		<div id="form">
+
+			<form class="center">
+				
+				<h3> Name a song </h3> 	
+				<label for="song_name"></label> <br>
+				<input type="text" for="Song Name" id="songname"> <br>
+				<p></p> <br>
+				<label>Why do you like this song</label> <br>
+				<textarea> </textarea> <br>
+				<p></p> <br>
+				<label>What date range is this song found in?</label> <br>
+					<input type="radio" name="range" value="0-1000"> <label> 0-1000 </label> <br>
+					<input type="radio" name="range" value="1000-1400"> <label> 1000-1400 </label> <br>
+					<input type="radio" name="range" value="1400-1800"> <label> 1400-1800 </label> <br>
+					<input type="radio" name="range" value="1800-present"> <label> 1800-present </label> <br>
+				<p></p> <br>
+				<label for="genre">What is (are) your favorite genre(s)?</label> <br>
+					<input type="checkbox" name="genre" value="rock"> Rock  <br>
+					<input type="checkbox" name="genre" value="metal"> Metal <br>
+					<input type="checkbox" name="genre" value="classical"> Classical <br>
+					<input type="checkbox" name="genre" value="rap"> Rap <br>
+				<p></p> <br>
+				<label for="rating">Rate out of 10</label> <br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select> <br>
+				<button type="button" onclick = "turnin(event)">Submit Response</button>
+
+
+				<p id="clay"> </p>
+			</form>
+
+		</div>
+		
+			
+		
+		
+	</body>
+
+
+</html>
+
+

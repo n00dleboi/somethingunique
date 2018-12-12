@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		
+		<title> Practice with stuff </title>
+
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			// Create an HTML page with as many text inputs as you'd like (2 or 3 is fine) and you can create a sentence based on those inputs and diplay it to the user. Example: ask for name, age, city, and say "Hi (name), from (city)"
+			//"Hello " + nombre + ". You are " + oldness ", living in " + living
+			function submission(event) {
+				event.preventDefault()
+			
+				var nombre = document.getElementById('name').value;
+				var oldness = document.getElementById('age').value;
+				var living = document.getElementById('city').value;
+				//var out = ("Hello " + nombre + ". You are " + oldness + ", living in " + living)
+				document.getElementById('useroutput').innerHTML = "Hello " + nombre + ". You are " + oldness + ", living in" + living
+				
+
+			}
+		</script>
+
+		<input type="text" id="name">What is your name?<br>
+		<input type="text" id="age">What is your age?<br>
+		<input type="text" id="city">What city do you live in?<br>
+		<button type="button" onclick = "submission(event)">Submit Response</button>
+		
+		<p id='useroutput'> </p>
+
+		
+
+	</body>
+
+
+</html>
